@@ -1,47 +1,45 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8">
-  <meta name="viewport" content="width=device-width, initial-scale=1.0">
-  <title>Messages from 061</title>
-  <link rel="stylesheet" href="css/style.css">
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Messages from 061</title>
+    <link href="https://fonts.googleapis.com/css2?family=UnifrakturCook&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="css/style.css">
 </head>
 <body>
-  <!-- Header -->
-  <header>
+
+<header>
     <h1>Messages from 061</h1>
     <nav>
-      <a href="index.html">Home</a>
-      <a href="poems/">Messages</a>
-      <a href="about.html">About</a>
+        <a href="index.html">Home</a>
+        <a href="messages/">Messages</a>
+        <a href="about.html">About</a>
     </nav>
-  </header>
+</header>
 
-  <!-- Main Content -->
-  <main>
-    <section>
-      <h2>Welcome!</h2>
-      <p>
-        You are viewing my raw poetry collection, capturing the everyday.
-      </p>
-    </section>
+<section>
+    <h2>Message List</h2>
+    <ul id="message-list">
+        <li><a href="messages/the-last-bite.html">The Last Bite</a></li>
+        <li><a href="messages/russian-roulette.html">A Game of Russian Roulette</a></li>
+        <li><a href="messages/eyes-wide-shut.html">Eyes Wide Shut</a></li>
+        <li><a href="messages/she-cant-run.html">She Can’t Run</a></li>
+        <li><a href="messages/i-want-to-be-somebody.html">I Want to Be Somebody to You</a></li>
+        <li><a href="messages/jack-shit.html">Jack Shit</a></li>
+    </ul>
+</section>
 
-    <section>
-      <h2>Poems</h2>
-      <ul>
-        <li><a href="poems/the-last-bite.md">The Last Bite</a></li>
-        <li><a href="poems/russian-roulette.md">A Game of Russian Roulette</a></li>
-        <li><a href="poems/eyes-wide-shut.md">Eyes Wide Shut</a></li>
-        <li><a href="poems/she-cant-run.md">She Can’t Run</a></li>
-        <li><a href="poems/i-want-to-be-somebody.md">I Want to Be Somebody to You</a></li>
-        <li><a href="poems/jack-shit.md">Jack Shit</a></li>
-      </ul>
-    </section>
-  </main>
+<footer>
+    <p>© 2026 toolexyforyou. All rights reserved.</p>
+</footer>
 
-  <!-- Footer -->
-  <footer>
-    <p>© 2026 Mallex Shipanga. All rights reserved.</p>
-  </footer>
+<script>
+const list = document.getElementById('message-list');
+const items = Array.from(list.getElementsByTagName('li'));
+items.sort((a, b) => a.textContent.localeCompare(b.textContent));
+items.forEach(item => list.appendChild(item));
+</script>
+
 </body>
 </html>
