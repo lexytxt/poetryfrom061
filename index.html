@@ -15,6 +15,7 @@
 
 <section id="messages">
     <h2>Messages</h2>
+    <input type="text" id="search-bar" placeholder="Search messages..." />
     <nav id="message-list">
         <a href="messages/the-last-bite.html">The last bite</a>
         <a href="messages/russian-roulette.html">Russian roulette</a>
@@ -46,6 +47,18 @@ const nav = document.getElementById('message-list');
 const links = Array.from(nav.getElementsByTagName('a'));
 links.sort((a, b) => a.textContent.localeCompare(b.textContent));
 links.forEach(link => nav.appendChild(link));
+
+const searchBar = document.getElementById('search-bar');
+searchBar.addEventListener('input', () => {
+    const query = searchBar.value.toLowerCase();
+    links.forEach(link => {
+        if(link.textContent.toLowerCase().includes(query)) {
+            link.style.display = "block";
+        } else {
+            link.style.display = "none";
+        }
+    });
+});
 </script>
 
 </body>
