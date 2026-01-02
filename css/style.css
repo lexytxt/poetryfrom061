@@ -1,67 +1,71 @@
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Chicle&display=swap');
 
 body {
-    background-color: #000000;
-    color: #ffffff;
-    font-family: 'Press Start 2P', cursive;
-    line-height: 1.4;
+    background-color: #f7cfd8;
+    color: #000000;
+    font-family: 'Chicle', cursive;
+    line-height: 1.7;
     max-width: 900px;
     margin: auto;
-    padding: 20px;
+    padding: 24px;
+    font-size: 1rem;
 }
 
 a {
-    color: #ffffff;
-    text-decoration: none;
-}
-
-a:hover {
-    color: #0a1aff;
+    color: #000000;
+    text-decoration: underline;
 }
 
 header {
     text-align: center;
-    padding: 25px 0;
+    padding: 32px 0;
 }
 
 header h1 {
+    font-size: 3rem;
     margin: 0;
-    font-size: 2em;
 }
 
 nav a {
-    margin: 0 15px;
+    margin: 0 14px;
 }
 
 section {
-    background-color: #000000;
-    border: 2px solid #0a1aff;
+    background-color: #f7cfd8;
+    border: 2px solid #000000;
     border-radius: 10px;
-    padding: 24px;
-    margin: 24px 0;
-}
-
-section p {
-    line-height: 1.45;
-    margin-bottom: 14px;
+    padding: 26px;
+    margin: 26px 0;
 }
 
 h2 {
-    font-size: 1.4em;
+    font-size: 1.6rem;
+    margin-bottom: 18px;
+}
+
+section p {
+    font-size: 1.1rem;
     margin-bottom: 16px;
 }
 
 footer {
     text-align: center;
-    padding: 20px 0;
-    border-top: 2px solid #0a1aff;
-    font-size: 0.8em;
+    padding: 24px 0;
+    border-top: 2px solid #000000;
+    font-size: 0.9rem;
 }
 
 @media (max-width: 600px) {
-    section {
-        padding: 16px;
-        margin: 16px 0;
+    header h1 {
+        font-size: 2.4rem;
+    }
+
+    h2 {
+        font-size: 1.4rem;
+    }
+
+    section p {
+        font-size: 1rem;
     }
 
     nav a {
