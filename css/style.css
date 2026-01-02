@@ -13,6 +13,21 @@ header {
     padding: 32px 0;
 }
 
+.title-container {
+    background-color: #fefefc;
+    border: 2px solid #CE2029;
+    border-radius: 15px;
+    padding: 20px 18px;
+    display: inline-block;
+    margin: 0 auto 24px auto;
+    text-align: center;
+    max-width: 600px;
+    background-image: 
+        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
+}
+
 header h1 {
     font-size: 2.6rem;
     margin: 0;
@@ -62,6 +77,17 @@ h2 {
     border: 2px solid #CE2029;
 }
 
+#search-bar {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #CE2029;
+    box-sizing: border-box;
+    font-family: 'Courier New', monospace;
+}
+
 p {
     font-size: 1rem;
     line-height: 1.25;
@@ -75,7 +101,7 @@ p {
     object-fit: cover;
     display: block;
     margin: 0 auto 16px;
-    border: 2px solid #CE2029;
+    border: 2px solid #000000;
 }
 
 footer {
