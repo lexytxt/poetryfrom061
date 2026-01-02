@@ -1,9 +1,9 @@
-@import url('https://fonts.googleapis.com/css2?family=Ranchers&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=Silkscreen&display=swap');
 
 body {
     background-color: #CE2029;
     color: #000000;
-    font-family: 'Ranchers', cursive;
+    font-family: 'Silkscreen', cursive;
     line-height: 1.7;
     max-width: 900px;
     margin: 0 auto;
@@ -30,7 +30,6 @@ header h1 {
     color: #000000;
     font-size: 1.4rem;
     text-align: center;
-    margin-bottom: 24px;
     transition: all 0.3s ease;
 }
 
@@ -66,7 +65,7 @@ h2 {
 #message-list {
     display: flex;
     flex-direction: column;
-    align-items: center;
+    align-items: flex-start;
     gap: 12px;
     margin: 24px 0;
 }
@@ -90,16 +89,15 @@ h2 {
     border: 2px solid #CE2029;
 }
 
-/* Poem text inside messages section */
 #message-list p {
-    font-family: 'Ranchers', cursive;
+    font-family: 'Silkscreen', cursive;
     font-size: 1.15rem;
-    line-height: 1.2; /* compact line spacing for poems */
+    line-height: 1.2;
     font-style: normal;
     text-align: left;
     color: #000000;
     margin-bottom: 16px;
-    white-space: pre-line; /* preserves manual line breaks */
+    white-space: pre-line;
 }
 
 .profile-photo {
