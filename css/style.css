@@ -99,6 +99,11 @@ p {
     text-indent: 0;
 }
 
+.message {
+    max-width: 540px;
+    margin: 0 auto;
+}
+
 .profile-photo {
     width: 80px;
     height: 80px;
