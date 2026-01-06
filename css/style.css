@@ -166,6 +166,11 @@ text-indent:0;
 max-width:540px;
 margin:0 auto;
 }
+@media(max-width:600px){
+.message{
+padding:18px 14px;
+}
+}
 .message p{
 line-height:1.1;
 margin-bottom:1.75em;
