@@ -15,20 +15,28 @@ container.innerHTML=
 +`<span style="margin:0 12px;">|</span>`+
 (index<messages.length-1?`<a href="${messages[index+1]}">Next →</a>`:`<span style="opacity:0.5;">Next →</span>`);
 }
-const shareBtn=document.getElementById('share-btn');
+const shareBtn=document.getElementById("share-btn");
 if(shareBtn){
-shareBtn.addEventListener('click',async()=>{
+shareBtn.addEventListener("click",async()=>{
 if(navigator.share){
 try{
 await navigator.share({
-title:document.querySelector('h2').textContent,
-text:'Check out this message from Messages from 061!',
+title:document.querySelector("h2").textContent,
+text:"Check out this message from Messages from 061!",
 url:window.location.href
 });
-}catch(err){console.error('Sharing failed',err);}
+}catch(err){console.error("Sharing failed",err);}
 }else{
-alert('Your browser does not support sharing. You can copy the URL instead: '+window.location.href);
+alert("Your browser does not support sharing. You can copy the URL instead: "+window.location.href);
 }
 });
 }
+document.addEventListener("keydown",e=>{
+if(e.key==="ArrowLeft"&&index>0){
+window.location.href=messages[index-1];
+}
+if(e.key==="ArrowRight"&&index<messages.length-1){
+window.location.href=messages[index+1];
+}
+});
 })();
