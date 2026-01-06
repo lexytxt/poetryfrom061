@@ -9,6 +9,13 @@ margin:0 auto;
 padding:24px;
 text-align:center;
 }
+body{
+opacity:0;
+animation:fadeIn 0.4s ease forwards;
+}
+@keyframes fadeIn{
+to{opacity:1;}
+}
 header{
 padding:32px 0;
 }
