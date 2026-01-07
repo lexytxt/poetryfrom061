@@ -1,23 +1,26 @@
-(function () {
+(function(){
   const params = new URLSearchParams(window.location.search);
-  const file = params.get("file");
-  if (!file) return;
-  const content = document.getElementById("message-content");
-  const title = document.getElementById("message-title");
-  if (!content || !title) return;
-  fetch("messages/" + file)
-    .then(res => {
-      if (!res.ok) throw new Error("Not found");
-      return res.text();
-    })
+  const file = params.get('file');
+  if(!file) return;
+  const contentContainer = document.getElementById('message-content');
+  const titleContainer = document.getElementById('message-title');
+  const markdownPath = '../messages/' + file;
+  function capitalizeFirstLetters(str){
+      return str.replace(/\b\w/g, c => c.toUpperCase());
+  }
+  fetch(markdownPath)
+    .then(res => res.text())
     .then(md => {
-      content.innerHTML = marked.parse(md);
-      const firstLine = md.split("\n").find(l => l.trim().startsWith("#"));
-      title.textContent = firstLine
-        ? firstLine.replace(/^#+\s*/, "")
-        : file.replace(".md", "").replace(/-/g, " ");
+      contentContainer.innerHTML = marked.parse(md);
+      const firstLine = md.split('\n').find(l => l.trim().startsWith('#'));
+      if(firstLine){
+        titleContainer.textContent = capitalizeFirstLetters(firstLine.replace(/^#+\s*/, ''));
+      } else {
+        titleContainer.textContent = capitalizeFirstLetters(file.replace('.md','').replace(/-/g,' '));
+      }
     })
-    .catch(() => {
-      content.innerHTML = "<p>Could not load message.</p>";
+    .catch(err => {
+      contentContainer.innerHTML = '<p>Could not load message.</p>';
+      console.error(err);
     });
 })();
