@@ -236,3 +236,49 @@ padding-left:12px;
 margin:1.5em 0;
 opacity:0.9;
 }
+.markdown-body{
+max-width:540px;
+margin:0 auto;
+}
+.markdown-body h1,
+.markdown-body h2,
+.markdown-body h3{
+font-family:'Space Mono',monospace;
+margin-bottom:14px;
+}
+.markdown-body p{
+font-size:1rem;
+line-height:1.1;
+margin-bottom:1.75em;
+white-space:pre-line;
+}
+.markdown-body a{
+color:#000000;
+text-decoration:none;
+border-bottom:1px solid #000000;
+}
+.markdown-body a:hover{
+opacity:0.7;
+}
+.markdown-body hr{
+border:none;
+border-top:2px solid #000000;
+margin:24px 0;
+}
+.markdown-body blockquote{
+border-left:4px solid #000000;
+padding-left:12px;
+margin:16px 0;
+}
+.markdown-body ul,
+.markdown-body ol{
+padding-left:20px;
+margin-bottom:1.5em;
+}
+.markdown-body code{
+font-family:'Space Mono',monospace;
+background:#fefefc;
+border:1px solid #000000;
+padding:2px 4px;
+border-radius:4px;
+}
