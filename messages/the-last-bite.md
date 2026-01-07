@@ -1,4 +1,7 @@
-# The last bite
+<section class="message markdown-body">
+    <h2>The last bite</h2>
+    <div id="message-content"></div>
+</section>
 
 She can act like it,  
 like there are no signs  
