@@ -1,24 +1,25 @@
 (function(){
-    const contentContainer = document.getElementById('message-content');
-    if(!contentContainer) return;
+  const params = new URLSearchParams(window.location.search);
+  const file = params.get('file');
+  if(!file) return;
 
-    const urlParams = new URLSearchParams(window.location.search);
-    const file = urlParams.get('file');
-    if(!file) {
-        contentContainer.innerHTML = '<p>No message specified.</p>';
-        return;
-    }
+  const contentContainer = document.getElementById('message-content');
+  const titleContainer = document.getElementById('message-title');
+  const markdownPath = '../messages/' + file;
 
-    const markdownPath = '../messages/' + file;
-
-    fetch(markdownPath)
-        .then(response => response.text())
-        .then(md => {
-            // wrap in markdown-body for styling
-            contentContainer.innerHTML = `<div class="markdown-body">${marked.parse(md)}</div>`;
-        })
-        .catch(err => {
-            contentContainer.innerHTML = '<p>Could not load message.</p>';
-            console.error(err);
-        });
+  fetch(markdownPath)
+    .then(res => res.text())
+    .then(md => {
+      contentContainer.innerHTML = marked.parse(md);
+      const firstLine = md.split('\n').find(l => l.trim().startsWith('#'));
+      if(firstLine){
+        titleContainer.textContent = firstLine.replace(/^#+\s*/, '');
+      } else {
+        titleContainer.textContent = file.replace('.md','');
+      }
+    })
+    .catch(err => {
+      contentContainer.innerHTML = '<p>Could not load message.</p>';
+      console.error(err);
+    });
 })();
