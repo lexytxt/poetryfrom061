@@ -34,26 +34,28 @@ header h1 {
     font-size: 2.6rem;
     margin: 0;
 }
-header nav a, #home-button {
+header nav a, #home-button, #share-btn, .social-link {
     display: inline-block;
     color: #000000;
     background-color: #fefefc;
     border: 2px solid #000000;
-    padding: 6px 12px;
     border-radius: 8px;
     text-decoration: none;
+    padding: 6px 12px;
     margin: 0 6px;
     font-family: 'Space Mono', monospace;
+    cursor: pointer;
     transition: opacity 0.2s ease, background-color 0.2s ease;
 }
-header nav a:hover, #home-button:hover {
+header nav a:hover, #home-button:hover, #share-btn:hover, .social-link:hover {
     background-color: #ffffff;
     opacity: 0.8;
 }
-#home-button svg {
+#home-button svg, .social-link svg {
     vertical-align: middle;
+    stroke: #000000;
 }
-section {
+section, .message, .markdown-body {
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
@@ -117,18 +119,7 @@ h2 {
     opacity: 0.8;
 }
 #share-btn {
-    color: #000000 !important;
-    background-color: #fefefc !important;
-    border: 2px solid #000000;
-    border-radius: 8px;
     padding: 8px 16px;
-    font-family: 'Space Mono', monospace;
-    cursor: pointer;
-    transition: opacity 0.2s ease, background-color 0.2s ease;
-}
-#share-btn:hover {
-    background-color: #ffffff;
-    opacity: 0.8;
 }
 p {
     font-size: 1rem;
@@ -142,67 +133,63 @@ footer {
     font-size: 0.85rem;
     text-align: center;
 }
-a:focus-visible,
-input:focus-visible {
+a:focus-visible, input:focus-visible {
     outline: 2px solid #000000;
     outline-offset: 3px;
 }
-.message, .markdown-body {
-    max-width: 540px;
-    margin: 0 auto;
-    background-color: #fefefc;
-    border: 2px solid #000000;
-    border-radius: 15px;
-    padding: 20px 18px;
-    text-align: left;
-    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-                      linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
-    background-size: 20px 20px;
-}
-.markdown-body h1,
-.markdown-body h2,
-.markdown-body h3 {
+.message h1, .message h2, .message h3, .markdown-body h1, .markdown-body h2, .markdown-body h3 {
     font-family: 'Space Mono', monospace;
     margin-bottom: 14px;
 }
-.markdown-body p {
+.message p, .markdown-body p {
     font-size: 1rem;
     line-height: 1.1;
     margin-bottom: 1.75em;
     white-space: pre-line;
 }
-.markdown-body a {
+.message a, .markdown-body a {
     color: #000000;
     text-decoration: none;
     border-bottom: 1px solid #000000;
 }
-.markdown-body a:hover {
+.message a:hover, .markdown-body a:hover {
     opacity: 0.7;
 }
-.markdown-body hr {
-    border: none;
-    border-top: 2px solid #000000;
-    margin: 24px 0;
-}
-.markdown-body blockquote {
+.message blockquote, .markdown-body blockquote {
     border-left: 4px solid #000000;
     padding-left: 12px;
     margin: 16px 0;
 }
-.markdown-body ul,
-.markdown-body ol {
+.message ul, .message ol, .markdown-body ul, .markdown-body ol {
     padding-left: 20px;
     margin-bottom: 1.5em;
 }
-.markdown-body li {
+.message li, .markdown-body li {
     margin-bottom: 0.5em;
 }
-.markdown-body code {
+.message code, .markdown-body code {
     font-family: 'Space Mono', monospace;
     background: #fefefc;
     border: 1px solid #000000;
     padding: 2px 4px;
     border-radius: 4px;
+}
+.profile-photo {
+    width: 80px;
+    height: 80px;
+    border-radius: 50%;
+    object-fit: cover;
+    display: block;
+    margin: 0 auto 16px;
+    border: 2px solid #000000;
+}
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    text-decoration: none;
+    color: #000000 !important;
 }
 @media (max-width: 600px) {
     .message, .markdown-body {
