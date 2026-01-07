@@ -1,8 +1,4 @@
----
-layout: default
-title: Eyes wide shut
-permalink: /eyes-wide-shut.html
----
+# Eyes wide shut
 
 I want you to know  
 it didn’t start  
