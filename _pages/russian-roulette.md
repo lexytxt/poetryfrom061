@@ -1,6 +1,7 @@
 ---
 layout: default
 title: Russian roulette
+permalink: /russian-roulette.html
 ---
 
 Go ahead, pull the trigger,  
