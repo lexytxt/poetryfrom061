@@ -1,13 +1,14 @@
 (function(){
     const messages=[
-        "message.html?file=eyes-wide-shut.md",
-        "message.html?file=i-want-to-be-somebody-to-you.md",
-        "message.html?file=russian-roulette.md",
-        "message.html?file=she-cant-run.md",
-        "message.html?file=the-last-bite.md"
+        "eyes-wide-shut.html",
+        "i-want-to-be-somebody-to-you.html",
+        "russian-roulette.html",
+        "she-cant-run.html",
+        "the-last-bite.html"
     ];
-    const current = window.location.href;
-    const index = messages.findIndex(m => current.includes(m.split('?')[1]));
+    const current = window.location.pathname.split("/").pop();
+    const index = messages.indexOf(current);
+
     const container = document.getElementById("message-pagination");
     if(container){
         container.innerHTML =
