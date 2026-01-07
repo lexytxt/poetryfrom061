@@ -1,4 +1,7 @@
-# Russian roulette
+---
+layout: default
+title: Russian roulette
+---
 
 Go ahead, pull the trigger,  
 why put up a fight?  
