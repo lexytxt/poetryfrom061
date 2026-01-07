@@ -109,7 +109,7 @@ section,
 .message .markdown-body h1:first-of-type {
     margin: 0;
     padding: 0;
-    text-align: center;
+    text-align: left;
     font-size: 1.5rem;
     line-height: 1.3;
     background: none;
