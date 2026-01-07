@@ -2,6 +2,7 @@
   const messages = [
     "eyes-wide-shut.md",
     "i-want-to-be-somebody-to-you.md",
+    "not-guilty.md",
     "russian-roulette.md",
     "she-cant-run.md",
     "the-last-bite.md"
