@@ -1,284 +1,211 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
-body{
-background-color:#CE2029;
-color:#000000;
-font-family:'Space Mono',monospace;
-line-height:1.25;
-max-width:900px;
-margin:0 auto;
-padding:24px;
-text-align:center;
+body {
+    background-color: #CE2029;
+    color: #000000;
+    font-family: 'Space Mono', monospace;
+    line-height: 1.25;
+    max-width: 900px;
+    margin: 0 auto;
+    padding: 24px;
+    text-align: center;
+    opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
 }
-body{
-opacity:0;
-animation:fadeIn 0.4s ease forwards;
+@keyframes fadeIn {
+    to { opacity: 1; }
 }
-@keyframes fadeIn{
-to{opacity:1;}
+header {
+    padding: 32px 0;
 }
-header{
-padding:32px 0;
+.title-container {
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 20px 18px;
+    display: inline-block;
+    margin: 0 auto 24px auto;
+    text-align: center;
+    max-width: 600px;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
-.title-container{
-background-color:#fefefc;
-border:2px solid #000000;
-border-radius:15px;
-padding:20px 18px;
-display:inline-block;
-margin:0 auto 24px auto;
-text-align:center;
-max-width:600px;
-background-image:linear-gradient(to right,rgba(0,0,0,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(0,0,0,0.03) 1px,transparent 1px);
-background-size:20px 20px;
+header h1 {
+    font-size: 2.6rem;
+    margin: 0;
 }
-header h1{
-font-size:2.6rem;
-margin:0;
+header nav a, #home-button {
+    display: inline-block;
+    color: #000000;
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0 6px;
+    font-family: 'Space Mono', monospace;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
 }
-header nav a{
-display:inline-block;
-color:#000000;
-background-color:#fefefc;
-border:2px solid #000000;
-padding:6px 12px;
-border-radius:8px;
-text-decoration:none;
-margin:0 6px;
-font-family:'Space Mono',monospace;
-transition:opacity 0.2s ease,background-color 0.2s ease;
+header nav a:hover, #home-button:hover {
+    background-color: #ffffff;
+    opacity: 0.8;
 }
-header nav a:hover{
-background-color:#ffffff;
-opacity:0.8;
+#home-button svg {
+    vertical-align: middle;
 }
-#home-button{
-display:inline-block;
-color:#000000;
-background-color:#fefefc;
-border:2px solid #000000;
-padding:6px 10px;
-border-radius:8px;
-text-decoration:none;
-transition:opacity 0.2s ease,background-color 0.2s ease;
+section {
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 20px 18px;
+    margin: 16px auto;
+    max-width: 600px;
+    text-align: left;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
-#home-button:hover{
-background-color:#ffffff;
-opacity:0.8;
+h2 {
+    font-size: 1.5rem;
+    margin-bottom: 14px;
 }
-#home-button svg{
-vertical-align:middle;
+#search-bar {
+    width: 100%;
+    padding: 10px 14px;
+    margin-bottom: 16px;
+    font-size: 1rem;
+    border-radius: 8px;
+    border: 1px solid #CE2029;
+    box-sizing: border-box;
+    font-family: 'Space Mono', monospace;
 }
-section{
-background-color:#fefefc;
-border:2px solid #000000;
-border-radius:15px;
-padding:20px 18px;
-margin:16px auto;
-max-width:600px;
-text-align:left;
-background-image:linear-gradient(to right,rgba(0,0,0,0.03) 1px,transparent 1px),linear-gradient(to bottom,rgba(0,0,0,0.03) 1px,transparent 1px);
-background-size:20px 20px;
+#message-list {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    gap: 10px;
+    margin: 16px 0;
 }
-h2{
-font-size:1.5rem;
-margin-bottom:14px;
+#message-list a {
+    display: block;
+    padding: 12px 20px;
+    background-color: #CE2029;
+    border-radius: 10px;
+    text-decoration: none;
+    color: #000000;
+    font-size: 1rem;
+    width: 100%;
+    box-sizing: border-box;
+    transition: background-color 0.2s ease, border 0.2s ease;
 }
-#search-bar{
-width:100%;
-padding:10px 14px;
-margin-bottom:16px;
-font-size:1rem;
-border-radius:8px;
-border:1px solid #CE2029;
-box-sizing:border-box;
-font-family:'Space Mono',monospace;
+#message-list a:hover {
+    background-color: #ffffff;
+    border: 2px solid #000000;
 }
-#message-list{
-display:flex;
-flex-direction:column;
-align-items:flex-start;
-gap:10px;
-margin:16px 0;
+#message-pagination a {
+    color: #000000 !important;
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    margin: 0 6px;
+    font-family: 'Space Mono', monospace;
 }
-#message-list a{
-display:block;
-padding:12px 20px;
-background-color:#CE2029;
-border-radius:10px;
-text-decoration:none;
-color:#000000;
-font-size:1rem;
-width:100%;
-box-sizing:border-box;
-transition:background-color 0.2s ease,border 0.2s ease;
+#message-pagination a:hover {
+    background-color: #ffffff;
+    opacity: 0.8;
 }
-#message-list a:hover{
-background-color:#ffffff;
-border:2px solid #000000;
+#share-btn {
+    color: #000000 !important;
+    background-color: #fefefc !important;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    padding: 8px 16px;
+    font-family: 'Space Mono', monospace;
+    cursor: pointer;
+    transition: opacity 0.2s ease, background-color 0.2s ease;
 }
-#message-pagination a{
-color:#000000 !important;
-background-color:#fefefc;
-border:2px solid #000000;
-padding:6px 12px;
-border-radius:8px;
-text-decoration:none;
-margin:0 6px;
-font-family:'Space Mono',monospace;
+#share-btn:hover {
+    background-color: #ffffff;
+    opacity: 0.8;
 }
-#message-pagination a:hover{
-background-color:#ffffff;
-opacity:0.8;
+p {
+    font-size: 1rem;
+    line-height: 1.1;
+    margin: 0;
+    text-indent: 0;
 }
-#share-btn{
-color:#000000 !important;
-background-color:#fefefc !important;
-border:2px solid #000000;
-border-radius:8px;
-padding:8px 16px;
-font-family:'Space Mono',monospace;
-cursor:pointer;
-transition:opacity 0.2s ease,background-color 0.2s ease;
-}
-#share-btn:hover{
-background-color:#ffffff;
-opacity:0.8;
-}
-.social-link{
-display:inline-flex;
-align-items:center;
-justify-content:center;
-background-color:#fefefc;
-border:2px solid #000000;
-border-radius:8px;
-padding:8px 16px;
-color:#000000;
-text-decoration:none;
-transition:opacity 0.2s ease,background-color 0.2s ease;
-}
-.social-link:hover{
-background-color:#ffffff;
-opacity:0.8;
-}
-.social-link svg{
-stroke:#000000;
-}
-p{
-font-size:1rem;
-line-height:1.1;
-margin:0;
-text-indent:0;
-}
-.message{
-max-width:540px;
-margin:0 auto;
-}
-@media(max-width:600px){
-.message{
-padding:18px 14px;
-}
-}
-.message p{
-line-height:1.1;
-margin-bottom:1.75em;
-white-space:pre-line;
-}
-.profile-photo{
-width:80px;
-height:80px;
-border-radius:50%;
-object-fit:cover;
-display:block;
-margin:0 auto 16px;
-border:2px solid #000000;
-}
-footer{
-padding:24px 0;
-border-top:2px solid #CE2029;
-font-size:0.85rem;
-text-align:center;
+footer {
+    padding: 24px 0;
+    border-top: 2px solid #CE2029;
+    font-size: 0.85rem;
+    text-align: center;
 }
 a:focus-visible,
-input:focus-visible{
-outline:2px solid #000000;
-outline-offset:3px;
+input:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
 }
-.message h1,
-.message h2{
-font-size:1.5rem;
-margin-bottom:14px;
-}
-.message h3{
-font-size:1.25rem;
-margin-bottom:12px;
-}
-.message strong{
-font-weight:700;
-}
-.message em{
-font-style:italic;
-}
-.message ul,
-.message ol{
-padding-left:20px;
-margin-bottom:1.5em;
-}
-.message li{
-margin-bottom:0.5em;
-}
-.message a{
-color:#000000;
-text-decoration:underline;
-}
-.message blockquote{
-border-left:3px solid #000000;
-padding-left:12px;
-margin:1.5em 0;
-opacity:0.9;
-}
-.markdown-body{
-max-width:540px;
-margin:0 auto;
+.message, .markdown-body {
+    max-width: 540px;
+    margin: 0 auto;
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 20px 18px;
+    text-align: left;
+    background-image: linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+                      linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 .markdown-body h1,
 .markdown-body h2,
-.markdown-body h3{
-font-family:'Space Mono',monospace;
-margin-bottom:14px;
+.markdown-body h3 {
+    font-family: 'Space Mono', monospace;
+    margin-bottom: 14px;
 }
-.markdown-body p{
-font-size:1rem;
-line-height:1.1;
-margin-bottom:1.75em;
-white-space:pre-line;
+.markdown-body p {
+    font-size: 1rem;
+    line-height: 1.1;
+    margin-bottom: 1.75em;
+    white-space: pre-line;
 }
-.markdown-body a{
-color:#000000;
-text-decoration:none;
-border-bottom:1px solid #000000;
+.markdown-body a {
+    color: #000000;
+    text-decoration: none;
+    border-bottom: 1px solid #000000;
 }
-.markdown-body a:hover{
-opacity:0.7;
+.markdown-body a:hover {
+    opacity: 0.7;
 }
-.markdown-body hr{
-border:none;
-border-top:2px solid #000000;
-margin:24px 0;
+.markdown-body hr {
+    border: none;
+    border-top: 2px solid #000000;
+    margin: 24px 0;
 }
-.markdown-body blockquote{
-border-left:4px solid #000000;
-padding-left:12px;
-margin:16px 0;
+.markdown-body blockquote {
+    border-left: 4px solid #000000;
+    padding-left: 12px;
+    margin: 16px 0;
 }
 .markdown-body ul,
-.markdown-body ol{
-padding-left:20px;
-margin-bottom:1.5em;
+.markdown-body ol {
+    padding-left: 20px;
+    margin-bottom: 1.5em;
 }
-.markdown-body code{
-font-family:'Space Mono',monospace;
-background:#fefefc;
-border:1px solid #000000;
-padding:2px 4px;
-border-radius:4px;
+.markdown-body li {
+    margin-bottom: 0.5em;
+}
+.markdown-body code {
+    font-family: 'Space Mono', monospace;
+    background: #fefefc;
+    border: 1px solid #000000;
+    padding: 2px 4px;
+    border-radius: 4px;
+}
+@media (max-width: 600px) {
+    .message, .markdown-body {
+        padding: 18px 14px;
+    }
 }
