@@ -1,4 +1,7 @@
-# Russian roulette
+<section class="message markdown-body">
+    <h2>Russian roulette</h2>
+    <div id="message-content"></div>
+</section>
 
 Go ahead, pull the trigger,  
 why put up a fight?  
