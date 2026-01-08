@@ -103,6 +103,10 @@ section,
     border-radius: 0;
     background-image: none;
 }
+.message .markdown-body {
+    max-width: 800px;
+    margin: 0 auto;
+}
 .message .markdown-body h1:first-of-type {
     margin: 0;
     padding: 0;
