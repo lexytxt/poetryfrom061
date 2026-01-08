@@ -138,12 +138,11 @@ h2 {
 }
 #message-list {
     display: grid;
-    grid-template-columns: 1fr 1fr;
+    grid-template-columns: 1fr;
     gap: 12px;
     margin: 16px 0;
-    max-width: 600px;
-    width: 90%;
 }
+
 #message-list a {
     display: block;
     padding: 12px 20px;
