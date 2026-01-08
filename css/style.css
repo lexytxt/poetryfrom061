@@ -80,6 +80,7 @@ section,
     padding: 20px 18px;
     margin: 16px auto;
     max-width: 800px;
+    width: 100%;
     text-align: left;
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
@@ -87,17 +88,22 @@ section,
     background-size: 20px 20px;
 }
 .message {
-    width: 100%;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
     max-width: 800px;
-    margin: 0 auto 24px auto;
+    width: 100%;
+    margin: 16px auto;
     padding: 0;
     background: none;
     border: none;
+    border-radius: 0;
+    background-image: none;
 }
 .message .markdown-body {
-    width: 100%;
     max-width: 100%;
-    margin: 0;
+    width: 100%;
+    margin: 0 auto;
 }
 .message .markdown-body h1:first-of-type {
     margin: 0;
@@ -202,12 +208,37 @@ p {
     border-radius: 50%;
     object-fit: cover;
     border: 2px solid #000000;
+    display: block;
+    margin: 0 auto 16px auto;
+}
+.social-link {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 8px 16px;
+    color: #000000;
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 8px;
+    text-decoration: none;
+    transition: background-color 0.2s ease, opacity 0.2s ease;
+}
+.social-link svg {
+    width: 20px;
+    height: 20px;
+    stroke: #000000;
+    fill: none;
 }
 footer {
     padding: 24px 0;
     border-top: 2px solid #CE2029;
     font-size: 0.85rem;
     text-align: center;
+}
+a:focus-visible,
+input:focus-visible {
+    outline: 2px solid #000000;
+    outline-offset: 3px;
 }
 @media (max-width: 800px) {
     section {
