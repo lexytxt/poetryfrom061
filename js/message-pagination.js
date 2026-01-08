@@ -4,7 +4,6 @@
         "i-want-to-be-somebody-to-you.md",
         "not-guilty.md",
         "russian-roulette.md",
-        "she-cant-run.md",
         "the-last-bite.md"
     ];
     const params = new URLSearchParams(window.location.search);
