@@ -94,7 +94,7 @@ section,
     display: grid;
     grid-template-rows: auto 1fr;
     gap: 12px;
-    max-width: 600px;
+    max-width: 800px;
     margin: 0 auto 24px auto;
     padding: 0;
     background: none;
