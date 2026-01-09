@@ -94,6 +94,26 @@ section,
     display: block;
     box-sizing: border-box;
 }
+.outer-border {
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 0;
+    margin: 16px auto;
+    max-width: 700px;
+    width: 100%;
+    box-sizing: border-box;
+}
+.inner-border {
+    background-color: #fefefc;
+    border: 2px solid #000000;
+    border-radius: 15px;
+    padding: 16px;
+    margin: 0 auto;
+    max-width: 680px;
+    width: 100%;
+    box-sizing: border-box;
+}
 .message {
     display: grid;
     grid-template-rows: auto 1fr;
@@ -255,7 +275,7 @@ input:focus-visible {
     outline: 2px solid #000000;
     outline-offset: 3px;
 }
-@media (max-width: 600px) {
+@media (max-width: 700px) {
     section {
         padding: 18px 14px;
     }
@@ -265,6 +285,14 @@ input:focus-visible {
     .message {
         max-width: 100%;
         width: 90%;
+    }
+    .outer-border {
+        max-width: 100%;
+        width: 90%;
+    }
+    .inner-border {
+        max-width: 95%;
+        width: 100%;
     }
     .title-container {
         width: 90%;
