@@ -85,7 +85,8 @@ header nav a:hover,
     fill: currentColor;
 }
 section,
-.markdown-body {
+.markdown-body,
+.message {
     background-color: #fefefc;
     border: 2px solid #000000;
     border-radius: 15px;
@@ -96,17 +97,18 @@ section,
     text-align: left;
     display: block;
     box-sizing: border-box;
+    background-image:
+        linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+    background-size: 20px 20px;
 }
 .message {
-    display: block;
-    max-width: 600px;
-    width: 100%;
-    margin: 16px auto;
-    padding: 20px;
-    background-color: #fefefc;
-    border: 2px solid #000000;
-    border-radius: 15px;
-    box-sizing: border-box;
+    display: grid;
+    grid-template-rows: auto 1fr;
+    gap: 12px;
+    background: none;
+    border: none;
+    border-radius: 0;
 }
 .message .markdown-body {
     max-width: 100%;
