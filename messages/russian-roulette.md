@@ -9,8 +9,8 @@ When you can be another
 by the end of the night.
 
 Tell me pretty white lies.
-Lies like, "I can feel the heat."
-Lies like, "I never, ever tasted nothing so sweet."
+Like, "I sure as hell feel the heat."
+Like, "I never, ever tasted nothing so sweet."
 
 When your bullet flies out,
 it's my teeth 
