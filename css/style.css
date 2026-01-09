@@ -5,7 +5,9 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background-color: #CE2029;
+    background: linear-gradient(120deg, #CE2029, #FF3333);
+    background-size: 400% 400%;
+    animation: gradientShift 15s ease infinite, fadeIn 0.4s ease forwards;
     color: #000000;
     font-family: 'Space Mono', monospace;
     line-height: 1.25;
@@ -15,13 +17,17 @@ body {
     padding: 24px 0;
     text-align: center;
     opacity: 0;
-    animation: fadeIn 0.4s ease forwards;
 }
 main {
     flex: 1;
 }
 @keyframes fadeIn {
     to { opacity: 1; }
+}
+@keyframes gradientShift {
+    0% { background-position: 0% 50%; }
+    50% { background-position: 100% 50%; }
+    100% { background-position: 0% 50%; }
 }
 header {
     padding: 32px 0;
