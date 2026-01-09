@@ -1,16 +1,25 @@
 # Russian roulette
 
-Go ahead, pull the trigger,
+Go ahead, 
+pull the trigger,
 why put up a fight?
-When you can be another “you deserve better”
+
+When you can be another 
+“you deserve better”
 by the end of the night.
 
 Tell me pretty white lies
-about how you only have eyes for me.
-Tell me pretty white lies
-about how you never tasted nothing so sweet.
+like, "I swear, 
+I feel the heat."
 
-But the shot still rings out 
-at the end of the night.
-So go ahead, babe, disappoint me
+Tell me pretty white lies
+like, "I never tasted 
+nothing so sweet."
+
+When the shot 
+still rings out 
+it's my teeth that I'll bite,
+
+saying, "Go ahead, babe, 
+disappoint me,"
 because you do it just right.
