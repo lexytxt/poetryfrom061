@@ -12,7 +12,7 @@ on the laminated menu.
 
 She can bring the steak 
 right back home to sit
-,on the kitchen counter,
+on the kitchen counter
 in its crappy styrofoam packaging.
 
 She can gawk at 
