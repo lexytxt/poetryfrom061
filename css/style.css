@@ -5,9 +5,9 @@ html, body {
 body {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(120deg, #CE2029, #FF3333);
-    background-size: 400% 400%;
-    animation: gradientShift 15s ease infinite, fadeIn 0.4s ease forwards;
+    background: linear-gradient(120deg, #CE2029, #FF3333, #CE2029);
+    background-size: 300% 300%;
+    animation: gradientShift 10s linear infinite, fadeIn 0.4s ease forwards;
     color: #000000;
     font-family: 'Space Mono', monospace;
     line-height: 1.25;
@@ -25,9 +25,9 @@ main {
     to { opacity: 1; }
 }
 @keyframes gradientShift {
-    0% { background-position: 0% 50%; }
-    50% { background-position: 100% 50%; }
-    100% { background-position: 0% 50%; }
+    0% { background-position: 0% 0%; }
+    50% { background-position: 100% 100%; }
+    100% { background-position: 0% 0%; }
 }
 header {
     padding: 32px 0;
