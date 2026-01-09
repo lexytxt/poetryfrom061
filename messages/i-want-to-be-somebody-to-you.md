@@ -1,6 +1,6 @@
 # I want to be somebody to you
 
-I hate to have to hit your line,
+I really hate to hit your line,
 asking, “Do you still feel me, 
 at least, some of the time?”
 
@@ -16,6 +16,6 @@ No, “Do you
 still taste me 
 on your pricey cigars?”
 
-Because I know it’s only momentary
+I know it’s only momentary
 but I’d hate to feel 
 that fucking temporary.
