@@ -1,15 +1,11 @@
 @import url('https://fonts.googleapis.com/css2?family=Space+Mono&display=swap');
 html, body {
     height: 100%;
-    margin: 0;
-    padding: 0;
 }
 body {
     display: flex;
     flex-direction: column;
-    background: linear-gradient(120deg, #CE2029, #FF3333, #CE2029);
-    background-size: 200% 100%;
-    animation: gradientShift 20s linear infinite, fadeIn 0.4s ease forwards;
+    background-color: #CE2029;
     color: #000000;
     font-family: 'Space Mono', monospace;
     line-height: 1.25;
@@ -19,16 +15,13 @@ body {
     padding: 24px 0;
     text-align: center;
     opacity: 0;
+    animation: fadeIn 0.4s ease forwards;
 }
 main {
     flex: 1;
 }
 @keyframes fadeIn {
     to { opacity: 1; }
-}
-@keyframes gradientShift {
-    0% { background-position: 0% 0%; }
-    100% { background-position: 100% 0%; }
 }
 header {
     padding: 32px 0;
@@ -195,13 +188,11 @@ p {
 .markdown-body h3 {
     margin-bottom: 14px;
 }
-
 .markdown-body a {
     color: #000000;
     text-decoration: none;
     border-bottom: 1px solid #000000;
 }
-
 .markdown-body blockquote {
     border-left: 4px solid #000000;
     padding-left: 12px;
