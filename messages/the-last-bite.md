@@ -17,7 +17,7 @@ in its crappy styrofoam packaging.
 
 She can gawk at 
 what advertised itself as
-“the juiciest steak on the menu”
+“juiciest steak on the menu”
 slowly rot from the inside out.
 
 She can “give it space” 
