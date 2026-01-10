@@ -16,7 +16,6 @@
         "the-last-bite.md"
     ];
     const markdownPath = './messages/' + file;
-
     fetch(markdownPath)
         .then(res => {
             if (!res.ok) throw new Error('File not found');
@@ -32,7 +31,7 @@
             if (paginationContainer && index >= 0) {
                 const prevLink = index > 0 ? `<a href="message.html?file=${messages[index-1]}">← Previous</a>` : `<span style="opacity:0.5;">← Previous</span>`;
                 const nextLink = index < messages.length-1 ? `<a href="message.html?file=${messages[index+1]}">Next →</a>` : `<span style="opacity:0.5;">Next →</span>`;
-                paginationContainer.innerHTML = `${prevLink}<span style="margin:0 12px;">|</span>${nextLink}`;
+                paginationContainer.innerHTML = `${prevLink}${nextLink}`;
             }
             if (shareBtn) {
                 shareBtn.addEventListener('click', async () => {
