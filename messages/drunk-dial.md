@@ -1,8 +1,12 @@
 # Drunk dial
 
-I hate to have to hit your line,
+I hate  
+to keep on
+hitting your line
+
 asking, “Do you still feel me, 
-at least, some of the time?”
+at least, 
+some of the time?”
 
 But, “Do you 
 still see me 
