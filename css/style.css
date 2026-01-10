@@ -183,16 +183,6 @@ h2 {
     box-sizing: border-box;
     text-align: left;
 }
-#message-pagination a {
-    color: #000000;
-    background-color: #fefefc;
-    border: 2px solid #000000;
-    padding: 6px 12px;
-    border-radius: 8px;
-    text-decoration: none;
-    margin: 0 6px;
-    font-family: 'Space Mono', monospace;
-}
 #message-pagination {
     display: flex;
     justify-content: center;
@@ -200,15 +190,29 @@ h2 {
     gap: 12px;
     margin: 16px 0;
     flex-wrap: wrap;
+    width: 100%;
+}
+#message-pagination a,
+#message-pagination span {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    padding: 6px 12px;
+    border-radius: 8px;
+    text-decoration: none;
+    font-family: 'Space Mono', monospace;
+    border: 2px solid #000000;
+    background-color: #fefefc;
+    color: #000000;
 }
 #message-pagination a:hover,
 #message-pagination a:focus {
     background-color: #ffffff;
     opacity: 0.8;
 }
-#message-pagination span {
-    display: inline-block;
+#message-pagination span[style] {
     opacity: 0.5;
+    pointer-events: none;
 }
 #share-btn {
     padding: 8px 16px;
