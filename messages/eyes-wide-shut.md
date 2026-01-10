@@ -22,4 +22,4 @@ where she dozed off in his truck.
 
 But it didn’t start 
 at that doctor’s office
-when her back slid down the coldest vinyl couch.
+when her back hit the coldest vinyl couch.
