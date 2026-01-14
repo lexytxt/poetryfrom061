@@ -1,31 +1,25 @@
 # Eyes wide shut
 
-I want you 
-to know
+I want you to know
 it didn’t start 
 at the doctor's:
 
-with her eyes 
-wide shut, 
+with her eyes wide shut, 
 her pupils blackened,
 and her eyebrows raised up.
 
 It started at the 
 dazzling entrance,
-where she was 
-shit out of luck.
+where she was shit out of luck.
 
 It started on the  
 dirty blackjack table,
-where she spent 
-her last buck.
+where she spent her last buck.
 
 It started in the 
 dingy parking lot,
-where she dozed off 
-in his truck.
+where she dozed off in his truck.
 
 But it didn’t start 
 at the doctor’s 
-when her back hit 
-the cold vinyl couch.
+when her back hit the cold vinyl couch.
