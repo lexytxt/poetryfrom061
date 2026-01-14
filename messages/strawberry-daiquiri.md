@@ -20,7 +20,7 @@ to say,
 knowing my favorite glass
 to be drinking.
 
-I dove headfirst
+So I dove headfirst
 into the glass
 of strawberry sweetness
 on my tongue,
