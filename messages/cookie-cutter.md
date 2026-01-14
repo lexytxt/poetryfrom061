@@ -1,9 +1,9 @@
 # Cookie cutter
 
 She was a perfectionist,
-who wore perfectionism
-as a badge 
-of honor,
+who wore 
+perfectionism
+as a badge of honor,
 
 cutting 
 her errors 
