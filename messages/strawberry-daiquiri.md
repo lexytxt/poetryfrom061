@@ -10,7 +10,7 @@ only stopping to get a quick smoke in.
 
 You leaned over
 the worn-out bar,
-where I watched the neon sign blink,
+where the neon sign blinked,
 
 to say,
 “She’ll have a daiquiri,”
