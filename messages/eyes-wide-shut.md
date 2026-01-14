@@ -1,7 +1,7 @@
 # Eyes wide shut
 
-It didn’t start at the doctor's:
-with her eyes wide shut,
+It didn’t start with
+her eyes wide shut,
 her pupils blackened,
 and her eyebrows raised up.
 
