@@ -1,7 +1,12 @@
 # Eyes wide shut
 
-It didn’t start with
-her eyes wide shut,
+I want you 
+to know
+it didn’t start 
+at the doctor's:
+
+with her eyes 
+wide shut, 
 her pupils blackened,
 and her eyebrows raised up.
 
@@ -21,6 +26,6 @@ where she dozed off
 in his truck.
 
 But it didn’t start 
-at that the doctor’s 
+at the doctor’s 
 when her back hit 
 the cold vinyl couch.
