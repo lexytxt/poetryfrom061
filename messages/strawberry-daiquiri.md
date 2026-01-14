@@ -14,7 +14,7 @@ where the neon sign blinked,
 
 to say,
 “She’ll have a daiquiri,”
-rembering my favorite drink.
+knowing my favorite drink.
 
 So I dove headfirst
 into the glass
