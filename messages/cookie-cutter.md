@@ -8,9 +8,9 @@ to cut
 her errors out 
 like paper dolls.
 
-Whatever wasn't 
-the crème de le crème 
-was automatically the bottom of the barrel.
+If it wasn't the crème de le crème 
+it was automatically 
+the bottom of the barrel.
 
 But when “perfect” 
 doesn’t even exist
