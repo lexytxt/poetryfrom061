@@ -17,5 +17,5 @@ those blunt
 scissors, 
 
 leaving the edges jagged, 
-to beam at her 
-crooked paper dolls.
+to beam at her crooked 
+paper dolls.
