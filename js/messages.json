@@ -1,9 +1,37 @@
 [
-  {"file": "not-guilty.md", "category": "confessional"},
-  {"file": "strawberry-daiquiri.md", "category": "confessional"},
-  {"file": "drunk-dial.md", "category": "postmodern"},
-  {"file": "russian-roulette.md", "category": "postmodern"},
-  {"file": "cookie-cutter.md", "category": "symbolist"},
-  {"file": "eyes-wide-shut.md", "category": "symbolist"},
-  {"file": "the-last-bite.md", "category": "symbolist"}
+    {
+        "file": "cookie-cutter.md",
+        "title": "Cookie cutter",
+        "category": "Symbolist"
+    },
+    {
+        "file": "drunk-dial.md",
+        "title": "Drunk dial",
+        "category": "Postmodern"
+    },
+    {
+        "file": "eyes-wide-shut.md",
+        "title": "Eyes wide shut",
+        "category": "Symbolist"
+    },
+    {
+        "file": "not-guilty.md",
+        "title": "Not guilty",
+        "category": "Confessional"
+    },
+    {
+        "file": "russian-roulette.md",
+        "title": "Russian roulette",
+        "category": "Postmodern"
+    },
+    {
+        "file": "strawberry-daiquiri.md",
+        "title": "Strawberry daiquiri",
+        "category": "Confessional"
+    },
+    {
+        "file": "the-last-bite.md",
+        "title": "The last bite",
+        "category": "Symbolist"
+    }
 ]
