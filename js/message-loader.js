@@ -20,16 +20,11 @@
             if (categories[m.category]) categories[m.category].push(m.file);
         });
 
-        categories["Confessional"].sort();
-        categories["Postmodern"].sort();
-        categories["Symbolist"].sort();
+        for (const key in categories) {
+            categories[key].sort((a,b) => a.localeCompare(b));
+        }
 
-        const allMessages = [
-            ...categories["Confessional"],
-            ...categories["Postmodern"],
-            ...categories["Symbolist"]
-        ];
-
+        const allMessages = [...categories["Confessional"], ...categories["Postmodern"], ...categories["Symbolist"]];
         const index = allMessages.indexOf(file);
 
         const markdownRes = await fetch(`./messages/${file}`);
@@ -41,9 +36,13 @@
         }
 
         if (paginationContainer && index >= 0) {
-            const prevLink = index > 0 ? `<a href="message.html?file=${allMessages[index-1]}">← Back</a>` : `<span style="opacity:0.5;">← Back</span>`;
-            const nextLink = index < allMessages.length-1 ? `<a href="message.html?file=${allMessages[index+1]}">Next →</a>` : `<span style="opacity:0.5;">Next →</span>`;
-            paginationContainer.innerHTML = `<div style="display:flex; justify-content: space-between;">${prevLink}${nextLink}</div>`;
+            const prevLink = index > 0 
+                ? `<a href="message.html?file=${allMessages[index-1]}">← Back</a>` 
+                : `<span style="opacity:0.5;">← Back</span>`;
+            const nextLink = index < allMessages.length-1 
+                ? `<a href="message.html?file=${allMessages[index+1]}">Next →</a>` 
+                : `<span style="opacity:0.5;">Next →</span>`;
+            paginationContainer.innerHTML = `<div style="display:flex; justify-content: space-between; gap: 40px;">${prevLink}${nextLink}</div>`;
         }
 
         if (shareBtn) {
