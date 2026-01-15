@@ -15,23 +15,16 @@
         if (!res.ok) throw new Error('Could not load messages list');
         const messagesData = await res.json();
         const messages = messagesData.map(m => m.file);
-
-        const currentMsg = messagesData.find(m => m.file === file);
-        const title = currentMsg ? currentMsg.title : file.replace('.md','');
+        const index = messages.indexOf(file);
 
         const markdownRes = await fetch(`./messages/${file}`);
         if (!markdownRes.ok) throw new Error('File not found');
         const md = await markdownRes.text();
 
         if (contentContainer) {
-            const html = md
-                .split('\n')
-                .map(line => line.trim() === '' ? '<br>' : line)
-                .join('\n');
-            contentContainer.innerHTML = `<h1>${title}</h1>` + marked.parse(html);
+            contentContainer.innerHTML = marked.parse(md, { breaks: true });
         }
 
-        const index = messages.indexOf(file);
         if (paginationContainer && index >= 0) {
             const prevLink = index > 0 ? `<a href="message.html?file=${messages[index-1]}">← Back</a>` : `<span style="opacity:0.5;">← Back</span>`;
             const nextLink = index < messages.length-1 ? `<a href="message.html?file=${messages[index+1]}">Next →</a>` : `<span style="opacity:0.5;">Next →</span>`;
@@ -42,7 +35,7 @@
             shareBtn.addEventListener('click', async () => {
                 if (navigator.share) {
                     try {
-                        await navigator.share({ title, text: "Check out this message from Messages from 061.", url: window.location.href });
+                        await navigator.share({ title: file.replace('.md',''), text: "Check out this message from Messages from 061.", url: window.location.href });
                     } catch {}
                 } else {
                     alert("Copy this URL:\n" + window.location.href);
