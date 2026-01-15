@@ -269,8 +269,8 @@ h2 {
     transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
-p em:first-child {
-    display: none;
+#contact {
+    margin-top: 24px;
 }
 
 footer {
