@@ -247,21 +247,21 @@ h2 {
 }
 
 .profile-container {
-    display: grid;
-    grid-template-columns: auto 1fr;
-    gap: 16px;
-    align-items: start;
+    display: block;
 }
 
 .profile-photo {
+    float: left;
     width: 80px;
     height: 80px;
     border: 3px solid #000;
     border-radius: 50%;
     object-fit: cover;
+    margin: 0 16px 16px 0;
 }
 
 .about-text {
+    overflow: hidden;
     text-align: left;
 }
 
