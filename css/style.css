@@ -40,6 +40,10 @@ header {
     text-align: center;
     max-width: 600px;
     width: 100%;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 header h1 {
@@ -62,6 +66,10 @@ header nav a,
     color: #000000;
     background-color: #fefefc;
     transition: opacity 0.2s ease, background-color 0.2s ease;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 header nav a:hover,
@@ -70,18 +78,21 @@ header nav a:hover,
 .social-link:hover,
 #message-list a:hover,
 .category-list a:hover {
-    background-color: #ffffff;
     opacity: 0.8;
+    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
 }
 
 #home-button {
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    border-radius: 50%;
     width: 44px;
     height: 44px;
     padding: 0;
+    border-radius: 50%;
+    border: 4px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 #home-button svg {
@@ -102,6 +113,10 @@ section,
     width: 100%;
     text-align: left;
     background-color: #fefefc;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 .outer-border {
@@ -128,8 +143,11 @@ section,
     padding: 8px;
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
+        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px),
+        linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
     background-size: 20px 20px;
+    border: 4px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
 }
 
 .message .markdown-body h1:first-of-type {
@@ -181,6 +199,9 @@ h2 {
     color: #000000;
     font-size: 1rem;
     text-align: left;
+    border: 4px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 #message-pagination {
@@ -205,6 +226,9 @@ h2 {
     background-color: #fefefc;
     color: #000000;
     transition: opacity 0.2s ease, background-color 0.2s ease;
+    border: 4px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 #message-pagination a:hover,
@@ -220,6 +244,10 @@ h2 {
 
 #share-btn {
     padding: 8px 16px;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 p {
@@ -274,6 +302,9 @@ p {
     object-fit: cover;
     display: block;
     margin: 0 auto 16px auto;
+    border: 4px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 .social-link {
@@ -281,6 +312,10 @@ p {
     align-items: center;
     justify-content: center;
     padding: 8px 16px;
+    border: 4px solid #000000;
+    border-radius: 10px;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 .category-list a {
@@ -294,6 +329,9 @@ p {
     text-align: left;
     margin-bottom: 8px;
     transition: opacity 0.2s ease, background-color 0.2s ease;
+    border: 4px solid #000000;
+    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    background-image: linear-gradient(to top, rgba(255,255,255,0.15), transparent 50%);
 }
 
 .category-list a:hover {
@@ -335,18 +373,4 @@ input:focus-visible {
         padding: 16px;
         margin: 0;
     }
-}
-
-.outer-border,
-.inner-border,
-.message,
-section,
-.markdown-body,
-.title-container,
-.profile-photo,
-.social-link,
-.category-list a {
-    border: 3px solid #000000;
-    border-radius: 10px;
-    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
 }
