@@ -17,10 +17,35 @@
     </header>
 
     <main>
-        <section id="messages" class="section-content">
-            <h2>Messages</h2>
-            <input type="text" id="search-bar" placeholder="Search messages..." />
-            <div id="message-list"></div>
+        <section class="outer-border">
+            <div class="inner-border">
+                <h2>Messages</h2>
+                <input type="text" id="search-bar" placeholder="Search messages..." />
+            </div>
+        </section>
+
+        <section id="confessional" class="outer-border">
+            <div class="inner-border">
+                <h2>Confessional</h2>
+                <p>Poetry using emotion, experience, and memory to explore the poetess’s life.</p>
+                <div id="confessional-messages" class="category-list"></div>
+            </div>
+        </section>
+
+        <section id="postmodern" class="outer-border">
+            <div class="inner-border">
+                <h2>Postmodern</h2>
+                <p>Poetry using identity, language, and meaning to challenge convention.</p>
+                <div id="postmodern-messages" class="category-list"></div>
+            </div>
+        </section>
+
+        <section id="symbolist" class="outer-border">
+            <div class="inner-border">
+                <h2>Symbolist</h2>
+                <p>Poetry using imagery, metaphor, and symbolism to suggest meaning.</p>
+                <div id="symbolist-messages" class="category-list"></div>
+            </div>
         </section>
     </main>
 
@@ -30,7 +55,6 @@
 
     <script>
         (async function() {
-            const listContainer = document.getElementById('message-list');
             const searchBar = document.getElementById('search-bar');
 
             try {
@@ -38,28 +62,51 @@
                 if (!res.ok) throw new Error('Could not load messages list');
                 const messages = await res.json();
 
-                const links = messages.map(file => {
-                    const name = file.replace(/-/g, ' ').replace(/\.md$/, '');
-                    const title = name.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
-                    const a = document.createElement('a');
-                    a.href = `message.html?file=${file}`;
-                    a.textContent = title;
-                    listContainer.appendChild(a);
-                    return a;
+                const categories = {
+                    "confessional": [],
+                    "postmodern": [],
+                    "symbolist": []
+                };
+
+                messages.forEach(msg => {
+                    if (categories[msg.category]) categories[msg.category].push(msg.file);
                 });
 
-                links.sort((a, b) => a.textContent.localeCompare(b.textContent))
-                     .forEach(a => listContainer.appendChild(a));
+                for (const key in categories) {
+                    categories[key].sort((a, b) => {
+                        const aName = a.replace(/\.md$/, '').replace(/-/g,' ');
+                        const bName = b.replace(/\.md$/, '').replace(/-/g,' ');
+                        return aName.localeCompare(bName);
+                    });
+                }
+
+                const createLinks = (list, containerId) => {
+                    const container = document.getElementById(containerId);
+                    list.forEach(file => {
+                        const name = file.replace(/\.md$/, '').replace(/-/g,' ');
+                        const title = name.split(' ').map(w => w[0].toUpperCase() + w.slice(1)).join(' ');
+                        const a = document.createElement('a');
+                        a.href = `message.html?file=${file}`;
+                        a.textContent = title;
+                        container.appendChild(a);
+                    });
+                }
+
+                createLinks(categories.confessional, 'confessional-messages');
+                createLinks(categories.postmodern, 'postmodern-messages');
+                createLinks(categories.symbolist, 'symbolist-messages');
 
                 searchBar.addEventListener('input', () => {
                     const query = searchBar.value.toLowerCase();
-                    links.forEach(link => {
+                    document.querySelectorAll('.category-list a').forEach(link => {
                         link.style.display = link.textContent.toLowerCase().includes(query) ? 'block' : 'none';
                     });
                 });
 
             } catch {
-                if (listContainer) listContainer.innerHTML = '<p>Could not load messages.</p>';
+                document.querySelectorAll('.category-list').forEach(container => {
+                    container.innerHTML = '<p>Could not load messages.</p>';
+                });
             }
         })();
     </script>
