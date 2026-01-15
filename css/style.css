@@ -40,29 +40,11 @@ header {
     text-align: center;
     max-width: 600px;
     width: 100%;
-    border: 2px solid #000000;
-    border-radius: 10px;
 }
 
 header h1 {
     font-size: 2.6rem;
     margin: 0;
-}
-
-header nav a,
-#home-button,
-#share-btn,
-.social-link,
-#message-list a,
-.category-list a,
-section,
-.outer-border,
-.inner-border,
-.message,
-.markdown-body,
-.profile-photo {
-    border: 2px solid #000000;
-    border-radius: 10px;
 }
 
 header nav a,
@@ -220,7 +202,6 @@ h2 {
     border-radius: 10px;
     text-decoration: none;
     font-family: 'Space Mono', monospace;
-    border: 2px solid #000000;
     background-color: #fefefc;
     color: #000000;
     transition: opacity 0.2s ease, background-color 0.2s ease;
@@ -354,7 +335,8 @@ input:focus-visible {
         padding: 16px;
         margin: 0;
     }
-    
+}
+
 .outer-border,
 .inner-border,
 .message,
@@ -364,8 +346,7 @@ section,
 .profile-photo,
 .social-link,
 .category-list a {
-    border: 3px solid #000000 !important;
-    border-radius: 10px !important;
+    border: 3px solid #000000;
+    border-radius: 10px;
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-}
 }
