@@ -40,9 +40,8 @@ header {
     text-align: center;
     max-width: 600px;
     width: 100%;
-    border: 2px solid #000000;
+    border: 4px solid #000000;
     border-radius: 10px;
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
 }
 
@@ -54,9 +53,7 @@ header h1 {
 header nav a,
 #home-button,
 #share-btn,
-.social-link,
-#message-list a,
-.category-list a {
+.social-link {
     display: inline-block;
     padding: 6px 12px;
     margin: 0 6px;
@@ -65,9 +62,8 @@ header nav a,
     text-decoration: none;
     color: #000000;
     background-color: #fefefc;
-    border: 2px solid #000000;
+    border: 4px solid #000000;
     border-radius: 10px;
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
     transition: opacity 0.2s ease, background-color 0.2s ease;
 }
@@ -75,11 +71,8 @@ header nav a,
 header nav a:hover,
 #home-button:hover,
 #share-btn:hover,
-.social-link:hover,
-#message-list a:hover,
-.category-list a:hover {
+.social-link:hover {
     opacity: 0.8;
-    background-image: linear-gradient(to top, rgba(255,255,255,0.35), transparent 50%);
 }
 
 #home-button {
@@ -99,10 +92,10 @@ header nav a:hover,
 }
 
 section,
-.markdown-body,
-.message,
 .outer-border,
-.inner-border {
+.inner-border,
+.message,
+.markdown-body {
     padding: 20px;
     margin: 16px auto;
     display: block;
@@ -110,9 +103,8 @@ section,
     width: 100%;
     text-align: left;
     background-color: #fefefc;
-    border: 2px solid #000000;
+    border: 4px solid #000000;
     border-radius: 10px;
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
 }
 
@@ -140,10 +132,7 @@ section,
     padding: 8px;
     background-image:
         linear-gradient(to right, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px),
-        linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
-    border: 2px solid #000000;
-    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+        linear-gradient(to bottom, rgba(0,0,0,0.03) 1px, transparent 1px);
 }
 
 .message .markdown-body h1:first-of-type {
@@ -195,9 +184,7 @@ h2 {
     color: #000000;
     font-size: 1rem;
     text-align: left;
-    border: 2px solid #000000;
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
-    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
+    margin-bottom: 8px;
 }
 
 #message-pagination {
@@ -221,9 +208,8 @@ h2 {
     font-family: 'Space Mono', monospace;
     background-color: #fefefc;
     color: #000000;
-    border: 2px solid #000000;
+    border: 4px solid #000000;
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
     transition: opacity 0.2s ease, background-color 0.2s ease;
 }
 
@@ -240,10 +226,9 @@ h2 {
 
 #share-btn {
     padding: 8px 16px;
-    border: 2px solid #000000;
+    border: 4px solid #000000;
     border-radius: 10px;
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
 }
 
 p {
@@ -298,9 +283,8 @@ p {
     object-fit: cover;
     display: block;
     margin: 0 auto 16px auto;
-    border: 2px solid #000000;
+    border: 4px solid #000000;
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
 }
 
 .social-link {
@@ -308,10 +292,9 @@ p {
     align-items: center;
     justify-content: center;
     padding: 8px 16px;
-    border: 2px solid #000000;
+    border: 4px solid #000000;
     border-radius: 10px;
     box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
 }
 
 .category-list a {
@@ -325,9 +308,6 @@ p {
     text-align: left;
     margin-bottom: 8px;
     transition: opacity 0.2s ease, background-color 0.2s ease;
-    border: 2px solid #000000;
-    box-shadow: inset 0 2px 0 rgba(255,255,255,0.3);
-    background-image: linear-gradient(to top, rgba(255,255,255,0.25), transparent 50%);
 }
 
 .category-list a:hover {
