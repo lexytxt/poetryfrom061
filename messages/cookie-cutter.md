@@ -15,7 +15,7 @@ But when
 even exist
 and done does.
 
-So she throws
+She throws
 out
 those blunt
 scissors,
