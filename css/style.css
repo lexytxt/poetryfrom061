@@ -63,23 +63,6 @@ header h1 {
     margin: 0;
 }
 
-.title-container h1 {
-    overflow: hidden;
-    border-right: 2px solid black;
-    white-space: nowrap;
-    width: 0;
-    animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
-}
-
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
 header nav a,
 #home-button,
 #share-btn,
@@ -189,6 +172,24 @@ section,
     border-bottom: 15px solid transparent;
     border-right: 18px solid #000000;
     z-index: 0;
+}
+
+.message .markdown-body h1:first-of-type {
+    overflow: hidden;
+    border-right: 2px solid black;
+    white-space: nowrap;
+    width: 0;
+    display: inline-block;
+    animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
 }
 
 .message .markdown-body h1:first-of-type::before {
