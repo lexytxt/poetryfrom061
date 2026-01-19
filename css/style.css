@@ -106,21 +106,13 @@ section,
     align-items: flex-start;
     margin: 20px 0;
     width: 100%;
-}
-
-.message {
-    display: flex;
-    flex-direction: column;
-    align-items: flex-start;
-    margin: 20px 0;
-    width: 100%;
     border: none;
 }
 
 .message .markdown-body {
     position: relative;
     width: 100%;
-    padding: 18px 20px 18px 20px;
+    padding: 18px 20px;
     background-color: #fefefc;
     color: #000000;
     line-height: 1.5;
@@ -129,26 +121,32 @@ section,
     border-radius: 20px;
     border: 3px solid #000000;
     box-shadow: 0 4px 6px rgba(0,0,0,0.1);
-    transition: transform 0.2s ease, background-color 0.2s ease;
-}
-
-.message .markdown-body:hover {
-    transform: scale(1.02);
-    background-color: #ffffff;
 }
 
 .message .markdown-body::before {
     content: "";
     position: absolute;
-    top: 18px;
+    top: 15px;
     left: -15px;
-    width: 12px;
-    height: 12px;
-    background-color: #fefefc;
-    border-left: 3px solid #000000;
-    border-bottom: 3px solid #000000;
-    transform: rotate(45deg);
-    box-sizing: border-box;
+    width: 0;
+    height: 0;
+    border-top: 12px solid transparent;
+    border-bottom: 12px solid transparent;
+    border-right: 15px solid #fefefc;
+    z-index: 1;
+}
+
+.message .markdown-body::after {
+    content: "";
+    position: absolute;
+    top: 15px;
+    left: -18px;
+    width: 0;
+    height: 0;
+    border-top: 15px solid transparent;
+    border-bottom: 15px solid transparent;
+    border-right: 18px solid #000000;
+    z-index: 0;
 }
 
 .message .markdown-body h1:first-of-type::before {
