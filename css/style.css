@@ -217,6 +217,19 @@ section,
     background: none;
 }
 
+.message {
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards;
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
+}
+
 h1, h2, h3, h4, h5, h6 {
     text-align: center;
 }
