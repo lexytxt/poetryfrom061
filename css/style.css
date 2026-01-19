@@ -327,6 +327,10 @@ input:focus-visible {
     h2 {
         font-size: 1.25rem;
     }
+
+    .message .markdown-body {
+    font-size: 0.9rem;
+}
 }
 
 html {
