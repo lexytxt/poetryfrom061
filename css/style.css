@@ -81,7 +81,7 @@ header nav a,
 #home-button,
 #share-btn,
 .social-link {
-    animation: pulseButton 2s infinite alternate;
+    animation: pulseButton 1s infinite alternate;
 }
 
 @keyframes pulseButton {
