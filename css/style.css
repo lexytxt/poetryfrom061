@@ -108,6 +108,15 @@ section,
     width: 100%;
 }
 
+.message {
+    display: flex;
+    flex-direction: column;
+    align-items: flex-start;
+    margin: 20px 0;
+    width: 100%;
+    border: none;
+}
+
 .message .markdown-body {
     position: relative;
     width: 100%;
@@ -132,14 +141,13 @@ section,
     content: "";
     position: absolute;
     top: 18px;
-    left: 0;
+    left: -3px;
     width: 12px;
-    height: 20px;
+    height: 12px;
     background-color: #fefefc;
     border-left: 3px solid #000000;
-    border-top: 3px solid #000000;
     border-bottom: 3px solid #000000;
-    border-radius: 0 10px 10px 0;
+    transform: rotate(45deg);
     box-sizing: border-box;
 }
 
