@@ -113,8 +113,8 @@ section,
 
 .message .markdown-body {
     position: relative;
-    width: 100%;
-    padding: 18px 20px;
+    width: calc(100% - 12px); 
+    padding: 18px 20px 18px 32px;
     background-color: #fefefc;
     color: #000000;
     line-height: 1.5;
@@ -134,13 +134,13 @@ section,
 .message .markdown-body::before {
     content: "";
     position: absolute;
-    top: 12px;
-    left: -6px;
+    top: 18px;
+    left: -12px;
     width: 12px;
-    height: 20px;
+    height: 24px;
     background-color: #fefefc;
-    border-top: 3px solid #000000;
     border-left: 3px solid #000000;
+    border-top: 3px solid #000000;
     border-bottom: 3px solid #000000;
     border-radius: 0 10px 10px 0;
     box-sizing: border-box;
