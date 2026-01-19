@@ -18,7 +18,7 @@ on me again.
 I’ll be back in
 fight or flight,
 frantically pressing “R”
-on the operating panel.
+on the panel.
 
 Only to book it 
 to a party
