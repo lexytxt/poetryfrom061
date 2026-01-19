@@ -1,4 +1,4 @@
-# Fight or flight
+# Press R
 
 I hate you,
 I hate you not,
