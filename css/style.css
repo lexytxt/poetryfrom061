@@ -85,6 +85,7 @@ header nav a:hover,
 #share-btn:hover,
 .social-link:hover {
     opacity: 0.8;
+    transform: scale(1.05);
 }
 
 #home-button {
@@ -318,4 +319,16 @@ input:focus-visible {
     section {
         padding: 18px 14px;
     }
+
+    h1 {
+        font-size: 2rem;
+    }
+
+    h2 {
+        font-size: 1.25rem;
+    }
+}
+
+html {
+    scroll-behavior: smooth;
 }
