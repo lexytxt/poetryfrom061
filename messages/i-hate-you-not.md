@@ -1,4 +1,4 @@
-# I hate you, I hate you not
+# I hate you not
 
 I hate you,
 I hate you not,
