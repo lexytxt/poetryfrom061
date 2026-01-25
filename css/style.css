@@ -8,6 +8,10 @@ html, body {
     height: 100%;
 }
 
+html {
+    scroll-behavior: smooth;
+}
+
 body {
     display: flex;
     flex-direction: column;
@@ -52,8 +56,6 @@ header {
     display: block;
     margin: 20px auto;
     width: 100%;
-    max-width: 100%;
-    box-sizing: border-box;
 }
 
 header h1 {
@@ -63,7 +65,6 @@ header h1 {
 
 header nav a,
 #home-button,
-#share-btn,
 .social-link {
     display: inline-block;
     padding: 10px 16px;
@@ -80,7 +81,6 @@ header nav a,
 
 header nav a:hover,
 #home-button:hover,
-#share-btn:hover,
 .social-link:hover {
     opacity: 0.8;
     transform: scale(1.05);
@@ -88,13 +88,7 @@ header nav a:hover,
 
 header nav a:active,
 #home-button:active,
-#share-btn:active,
 .social-link:active {
-    transform: scale(0.95);
-    box-shadow: 0 2px 4px rgba(0,0,0,0.2);
-}
-
-#message-pagination a:active {
     transform: scale(0.95);
     box-shadow: 0 2px 4px rgba(0,0,0,0.2);
 }
@@ -103,10 +97,6 @@ header nav a:active,
     display: inline-flex;
     align-items: center;
     justify-content: center;
-    padding: 10px 16px;
-    border-radius: 10px;
-    width: auto;
-    height: auto;
 }
 
 #home-button svg {
@@ -130,9 +120,11 @@ section,
     display: flex;
     flex-direction: column;
     align-items: flex-start;
-    margin: 20px 0;
     width: 100%;
     border: none;
+    transform: translateX(-100%);
+    opacity: 0;
+    animation: slideIn 0.6s ease forwards;
 }
 
 .message .markdown-body {
@@ -186,37 +178,8 @@ section,
     animation: typing 2s steps(20, end) forwards, blink 0.75s step-end infinite;
 }
 
-@keyframes typing {
-    from { width: 0; }
-    to { width: 100%; }
-}
-
-@keyframes blink {
-    50% { border-color: transparent; }
-}
-
-.message .markdown-body h1:first-of-type::before {
-    content: none;
-}
-
 .message .markdown-body > *:not(h1:first-of-type) {
     margin: 0 0 1.5em 0;
-    padding: 0;
-    border: none;
-    background: none;
-}
-
-.message {
-    transform: translateX(-100%);
-    opacity: 0;
-    animation: slideIn 0.6s ease forwards;
-}
-
-@keyframes slideIn {
-    to {
-        transform: translateX(0);
-        opacity: 1;
-    }
 }
 
 h1, h2, h3, h4, h5, h6 {
@@ -237,15 +200,6 @@ h2 {
     border: 1px solid #CE2029;
 }
 
-#message-list {
-    display: grid;
-    grid-template-columns: 1fr;
-    gap: 12px;
-    margin: 20px 0;
-    padding: 0;
-}
-
-#message-list a,
 .category-list a {
     display: block;
     padding: 16px 24px;
@@ -256,16 +210,13 @@ h2 {
     font-size: 1rem;
     text-align: left;
     margin-bottom: 8px;
-    transition: opacity 0.2s ease, background-color 0.2s ease;
-    border: none;
+    transition: opacity 0.2s ease;
 }
 
-#message-list a:hover,
 .category-list a:hover {
     opacity: 0.8;
 }
 
-#message-list a:last-child,
 .category-list a:last-child {
     margin-bottom: 0;
 }
@@ -282,7 +233,6 @@ h2 {
 
 #message-pagination a,
 #message-pagination span,
-#share-btn,
 .profile-photo,
 .social-link {
     border: 3px solid #000000;
@@ -291,8 +241,7 @@ h2 {
 }
 
 #message-pagination a,
-#message-pagination span,
-#share-btn {
+#message-pagination span {
     display: inline-flex;
     align-items: center;
     justify-content: center;
@@ -303,8 +252,7 @@ h2 {
     color: #000000;
 }
 
-#message-pagination a:hover,
-#message-pagination a:focus {
+#message-pagination a:hover {
     background-color: #ffffff;
     opacity: 0.8;
 }
@@ -318,7 +266,6 @@ h2 {
     float: right;
     width: 80px;
     height: 80px;
-    border: 3px solid #000;
     border-radius: 50%;
     object-fit: cover;
     margin: 0 0 20px 20px;
@@ -328,17 +275,6 @@ h2 {
     overflow: hidden;
     text-align: left;
     padding: 16px 20px;
-}
-
-.social-link {
-    display: inline-flex;
-    align-items: center;
-    justify-content: center;
-    padding: 10px 16px;
-    text-decoration: none;
-    background-color: #fefefc;
-    color: #000000;
-    transition: background-color 0.2s ease, opacity 0.2s ease;
 }
 
 #contact {
@@ -356,6 +292,22 @@ a:focus-visible,
 input:focus-visible {
     outline: 2px solid #000000;
     outline-offset: 3px;
+}
+
+@keyframes typing {
+    from { width: 0; }
+    to { width: 100%; }
+}
+
+@keyframes blink {
+    50% { border-color: transparent; }
+}
+
+@keyframes slideIn {
+    to {
+        transform: translateX(0);
+        opacity: 1;
+    }
 }
 
 @media (max-width: 600px) {
@@ -386,14 +338,12 @@ input:focus-visible {
 
     header nav a,
     #home-button,
-    #share-btn,
     .social-link {
         padding: 8px 12px;
         margin: 4px 2px;
         font-size: 0.85rem;
     }
 
-    #message-list a,
     .category-list a {
         padding: 16px 20px;
         font-size: 0.9rem;
@@ -407,14 +357,6 @@ input:focus-visible {
     .message .markdown-body h1 {
         font-size: 1.2rem;
     }
-
-    .message .markdown-body h2 {
-        font-size: 1.05rem;
-    }
-
-    .message .markdown-body h3 {
-        font-size: 0.95rem;
-    }
 }
 
 @media (min-width: 601px) and (max-width: 900px) {
@@ -425,10 +367,6 @@ input:focus-visible {
 
     header {
         padding: 28px 0;
-    }
-
-    .title-container {
-        padding: 20px;
     }
 
     section {
@@ -443,26 +381,9 @@ input:focus-visible {
         font-size: 1.3rem;
     }
 
-    #message-list a,
-    .category-list a {
-        padding: 18px 24px;
-    }
-
     .message .markdown-body {
         font-size: 0.95rem;
         padding: 18px 20px;
-    }
-
-    .message .markdown-body h1 {
-        font-size: 1.4rem;
-    }
-
-    .message .markdown-body h2 {
-        font-size: 1.2rem;
-    }
-
-    .message .markdown-body h3 {
-        font-size: 1.05rem;
     }
 }
 
@@ -487,25 +408,4 @@ input:focus-visible {
     h2 {
         font-size: 1.4rem;
     }
-
-    .message .markdown-body {
-        font-size: 1rem;
-        padding: 20px;
-    }
-
-    .message .markdown-body h1 {
-        font-size: 1.6rem;
-    }
-
-    .message .markdown-body h2 {
-        font-size: 1.3rem;
-    }
-
-    .message .markdown-body h3 {
-        font-size: 1.15rem;
-    }
-}
-
-html {
-    scroll-behavior: smooth;
 }
