@@ -6,7 +6,7 @@ be laminated?
 
 Like that
 bachelor’s degree
-hung up on your wall,
+pinned up on your wall,
 
 with the
 glossy finish
